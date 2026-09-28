@@ -1,6 +1,6 @@
 {
   "name": "bye-ad",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Show a friendly notice when no ad blocker is detected. Encourage users to install uBlock Origin.",
   "type": "module",
   "main": "./dist/index.cjs",

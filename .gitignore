@@ -141,6 +141,7 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
-# End of https://www.toptal.com/developers/gitignore/api/node
+.npmrc
 
+# End of https://www.toptal.com/developers/gitignore/api/node
 
