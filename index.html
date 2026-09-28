@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bye-ad Demo</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      padding: 2rem;
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>bye-ad Demo</h1>
+  <p>광고 차단기를 끈 상태에서 새로고침하면 모달이 뜹니다.</p>
+
+  <div
+    id="ad-sensor"
+    class="ad native-ad ad-banner adsbygoogle ad-container advertisement"
+    style="position:absolute; width:1px; height:1px; opacity:0; pointer-events:none;"
+  ></div>
+
+  <div id="ad-note-modal">
+    <div id="ad-note-box">
+      <p>광고 차단기가 감지되지 않았습니다.<br>uBlock Origin을 설치하면 더 빠르고 안전하게 인터넷을 쓸 수 있어요.</p>
+      <button id="ad-note-ok">OK</button>
+      <button id="ad-note-install">설치하러 가기</button>
+    </div>
+  </div>
+
+  <!-- 빌드 후 테스트할 때 사용 -->
+  <!-- <script src="./dist/index.global.js"></script> -->
+  <!-- <script>bye_ad();</script> -->
+
+  <script type="module">
+    import { bye_ad } from './src/index.ts';
+    bye_ad();
+  </script>
+</body>
+</html>
