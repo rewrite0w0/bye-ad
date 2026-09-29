@@ -2,21 +2,77 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bye-ad Demo</title>
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      padding: 2rem;
-      max-width: 40rem;
-      margin: 0 auto;
-    }
-  </style>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>bye-ad test</title>
 </head>
+
 <body>
-  <!-- 빌드 후 테스트할 때 사용 -->
-  <script src="./dist/index.global.js"></script>
-  <script>bye_ad();</script>
+
+  <main>
+    <h1>bye-ad test</h1>
+
+    <p>
+      광고 차단기가 감지되면 modal이 표시되지 않아야 합니다.
+    </p>
+  </main>
+
+  <!--
+    DOM bait
+
+    실제 페이지에 존재하는 광고와 유사한
+    class를 사용합니다.
+  -->
+  <div
+    id="bye-ad-sensor"
+    class="
+      ad
+      ads
+      advertisement
+      native-ad
+      native-ad-1
+      ad-container
+      ad-wrapper
+      sponsored
+      banner-ad
+      display-ad
+    "
+    data-ad="true"
+    aria-hidden="true"
+    style="
+      position:absolute;
+      left:-99999px;
+      top:-99999px;
+      width:1px;
+      height:1px;
+    "
+  ></div>
+
+  <script src="../dist/index.global.js"></script>
+
+  <script>
+    bye_ad({
+      lang: "ko",
+
+      waitMs: 2000,
+
+      onShow() {
+        console.log(
+          "[bye-ad] modal shown"
+        );
+      },
+
+      onClose() {
+        console.log(
+          "[bye-ad] modal closed"
+        );
+      }
+    });
+  </script>
 
 </body>
 </html>
