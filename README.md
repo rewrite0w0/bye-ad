@@ -1,13 +1,13 @@
-# bye-ad
+# fza
 
 광고 차단기가 감지되지 않았을 때 사용자에게 uBlock Origin 설치를 안내하는 작은 브라우저 라이브러리입니다.
 
-`bye-ad`는 광고 차단기 설치 여부를 직접 확인하지 않고, HTML bait와 network sensor의 차단 여부를 기준으로 동작을 추정합니다.
+`fza`는 광고 차단기 설치 여부를 직접 확인하지 않고, HTML bait와 network sensor의 차단 여부를 기준으로 동작을 추정합니다.
 
 ## 설치
 
 ```bash
-npm install bye-ad
+npm install fza
 ```
 
 ## 사용법
@@ -32,14 +32,14 @@ npm install bye-ad
 ></div>
 ```
 
-`display: none`, `visibility: hidden`, `opacity: 0` 등으로 bait를 미리 숨기지 마세요. bye-ad는 bait가 원래 정상적으로 렌더링되는 상태에서 광고 차단기에 의해 제거되거나 숨겨지는 변화를 감지합니다. 처음부터 숨겨져 있으면 사이트가 숨긴 것인지 광고 차단기가 숨긴 것인지 구분할 수 없습니다.
+`display: none`, `visibility: hidden`, `opacity: 0` 등으로 bait를 미리 숨기지 마세요. fza는 bait가 원래 정상적으로 렌더링되는 상태에서 광고 차단기에 의해 제거되거나 숨겨지는 변화를 감지합니다. 처음부터 숨겨져 있으면 사이트가 숨긴 것인지 광고 차단기가 숨긴 것인지 구분할 수 없습니다.
 
 ### 2. 실행
 
 #### npm
 
 ```ts
-import { bye_ad } from "bye-ad";
+import { bye_ad } from "fza";
 
 bye_ad();
 ```
@@ -61,7 +61,7 @@ bye_ad();
   "
 ></div>
 
-<script src="https://unpkg.com/bye-ad/dist/index.global.js"></script>
+<script src="https://unpkg.com/fza/dist/index.global.js"></script>
 
 <script>
   bye_ad();
@@ -168,7 +168,7 @@ network sensor
 
 두 센서가 모두 정상적으로 동작하면 설치 안내 modal을 표시합니다.
 
-> `bye-ad`의 탐지 결과는 광고 차단기의 설치 여부를 보장하지 않으며, 페이지에서 관찰된 차단 동작을 기반으로 한 추정입니다.
+> `fza`의 탐지 결과는 광고 차단기의 설치 여부를 보장하지 않으며, 페이지에서 관찰된 차단 동작을 기반으로 한 추정입니다.
 
 ## License
 
